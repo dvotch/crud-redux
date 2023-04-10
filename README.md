@@ -1,92 +1,58 @@
-# CRUD + Redux
+## Блок 3: CRUD + Redux  (TBD)
 
+Сделаем страничку для инвентаризации продуктов
+Темплэйт проекта можно взять с первого блока
 
+### Что предстоит освоить
+- [API, CRUD](https://doka.guide/tools/api/)
+- [Redux](https://redux.js.org/)
+- [React Router](https://reactrouter.com/en/main)
 
-## Getting started
+### Что предстоит сделать
+- Список продуктов
+- Детальное вью продукта
+- Окно для создания нового продукта
+- Конфирмейшн для удаления продукта
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+[Подробное описание задачи](./03-block/03-block.md)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Темы для ревью
 
-## Add your files
+1. Окружение и зависимости
+    - node.js
+    - npm
+    - create react app
+    - prettier
+    - eslint
+    - MUI
+    - styled components
+    - React Developers Tools
+2. React
+    - JSX, условный рендеринг, работа с коллекциями
+    - props, children
+    - state
+    - особенности работы с событиями
+    - работа с формами
+    - функциональные компоненты и namespaces
+    - Vitrual DOM
+    - Функции Lifecycle, использование интервалов
+    - Ref
+    - React.Fragment
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Дополнительные материалы
+- [React документация](https://ru.reactjs.org/docs/getting-started.html)
+- [Видеокурс](https://www.youtube.com/watch?v=GNrdg3PzpJQ)
 
-```
-cd existing_repo
-git remote add origin https://git.it-mentor.tech/reactcore/crud-redux.git
-git branch -M main
-git push -uf origin main
-```
+### npm vs yarn
+Yarn - альтернативный пакетный менеджер для js. У него есть преимущества, но их немного - поэтому используем npm, как более распространенный.
 
-## Integrate with your tools
+### Eslint + Prettier + Husky
+[Стиль кода. Eslint. Husky.](https://www.youtube.com/playlist?list=PLlwtdxQXoJAvMeHYm-bMyTECOjKAXLFN0)  
+Eslint - инструмент для статического анализа кода js. Позволяет выявить возможные ошибки на ранней стадии, унифицировать код и упростить решение merge-конфликтов.  
+[Husky](https://github.com/typicode/husky) - с помощью него настраиваем запуск линтера перед коммитом (pre-commit) - если проверка не проходит, коммитить не дает.
 
-- [ ] [Set up project integrations](https://git.it-mentor.tech/reactcore/crud-redux/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Подготовка к интервью
+- [Вопросы про React](https://medium.com/@kanby/%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%BF%D1%80%D0%BE-react-%D0%BD%D0%B0-%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8-3bc1f4e021f4)
+- [Готовимся к собеседованию по React](https://ru.bitdegree.org/rukovodstvo/react-js/)
+- [Вопросы на собеседование React разработчика](https://github.com/likezninjaz/react-ru-interview-questions)
+- [324 вопроса React [ENG]](https://github.com/sudheerj/reactjs-interview-questions)
