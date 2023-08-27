@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "cra-template-typescript-styled": "^1.1.0"
+  }
+}
