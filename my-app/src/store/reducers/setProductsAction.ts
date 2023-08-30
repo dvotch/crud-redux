@@ -5,7 +5,6 @@ import { PRODUCTS_URL } from '../../constants/api.constants';
 import { productSlice } from '../product/product.slice';
 
 export const fetchProducts = () => async (dispatch: AppDispatch) => {
-    console.log(1);
     try {
         dispatch(productSlice.actions.productsFetching());
         const response = await axios.get<IProduct[]>(PRODUCTS_URL);

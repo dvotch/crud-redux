@@ -5,12 +5,14 @@ interface ProductState {
     products: IProduct[];
     isLoading: boolean;
     error: string;
+    modalStatus: boolean;
 }
 
 const initialState: ProductState = {
     products: [],
     isLoading: false,
     error: '',
+    modalStatus: false,
 };
 
 export const productSlice = createSlice({
@@ -28,6 +30,9 @@ export const productSlice = createSlice({
         productsFetchingError: (state, action: PayloadAction<string>) => {
             state.isLoading = false;
             state.error = action.payload;
+        },
+        modalStatusToggle: state => {
+            state.modalStatus = !state.modalStatus;
         },
     },
 });
