@@ -6,7 +6,7 @@ import { useAppSelector } from '../../../hooks/redux';
 
 type ProductCreateContainerProps = {
     children: React.ReactNode;
-    onClick: React.MouseEventHandler<HTMLDivElement>;
+    onClose: React.MouseEventHandler<HTMLDivElement>;
 };
 
 const ModalContainer = styled.div<{ $visible?: boolean }>`
@@ -19,16 +19,16 @@ const ModalContainer = styled.div<{ $visible?: boolean }>`
     background-color: gray;
     left: 0;
     top: 0;
-    opacity: ${props => (props.$visible ? '0.9' : '0')};
+    opacity: ${props => (props.$visible ? '0.96' : '0')};
     z-index: 3;
     transition: 0.5s;
     pointer-events: ${props => (props.$visible ? 'visible' : 'none')};
 `;
-function ProductCreateContainer({ children, onClick }: ProductCreateContainerProps) {
+function ProductCreateContainer({ children, onClose }: ProductCreateContainerProps) {
     const { modalStatus } = useAppSelector(state => state.productReducer);
     return (
-        <ModalContainer $visible={modalStatus} onClick={onClick}>
-            <ProductModal children={children} title='Create products' onClick={onClick} />
+        <ModalContainer $visible={modalStatus} onClick={onClose}>
+            <ProductModal children={children} title='Create products' onClick={onClose} />
         </ModalContainer>
     );
 }

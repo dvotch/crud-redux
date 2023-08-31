@@ -1,9 +1,9 @@
 import React, { memo, FC } from 'react';
-import { ProductModel } from '../../../models/product.model';
+import { IProduct } from '../../../models/product.model';
 import styled from 'styled-components';
 import ProductCardDescription from './product-card.description';
 
-type ProductCardProps = ProductModel;
+type ProductCardProps = IProduct;
 
 const ProductCardStyle = styled.div`
     width: 30rem;

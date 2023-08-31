@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { ProductModel } from '../models/product.model';
+import { IProduct } from '../models/product.model';
 import { fetchProductsApi } from '../services/product-api.service';
 import { AxiosError } from 'axios';
 
 export function useProducts() {
-    const [products, setProducts] = useState<ProductModel[]>([]);
+    const [products, setProducts] = useState<IProduct[]>([]);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
 

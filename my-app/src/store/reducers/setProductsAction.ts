@@ -3,11 +3,12 @@ import { AppDispatch, RootState } from '../store';
 import { IProduct } from '../../models/product.model';
 import { PRODUCTS_URL } from '../../constants/api.constants';
 import { productSlice } from '../product/product.slice';
+import { fetchProductsApi } from '../../services/product-api.service';
 
 export const fetchProducts = () => async (dispatch: AppDispatch) => {
     try {
         dispatch(productSlice.actions.productsFetching());
-        const response = await axios.get<IProduct[]>(PRODUCTS_URL);
+        const response = await fetchProductsApi();
         dispatch(productSlice.actions.productsFetchingSuccess(response.data));
     } catch (e) {
         const error = e as Error | AxiosError;

@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { IProduct } from '../../models/product.model';
+import uuid from 'react-uuid';
 
 interface ProductState {
     products: IProduct[];
@@ -33,6 +34,16 @@ export const productSlice = createSlice({
         },
         modalStatusToggle: state => {
             state.modalStatus = !state.modalStatus;
+        },
+        createNewProduct: (state, action: PayloadAction<Partial<IProduct>>) => {
+            const emptyProduct: IProduct = {
+                id: uuid(),
+                title: 'none',
+                description: 'none',
+                price: 0,
+                category: 'none',
+            };
+            state.products.unshift({ ...emptyProduct, ...action.payload });
         },
     },
 });

@@ -1,5 +1,4 @@
 import React, { memo, FC, useState, useEffect } from 'react';
-import { ProductModel } from '../../../models/product.model';
 import { fetchProductsApi } from '../../../services/product-api.service';
 import ProductList from '../list/product-list.component';
 import { AxiosError } from 'axios';
@@ -9,6 +8,7 @@ import { fetchProducts } from '../../../store/reducers/setProductsAction';
 import ProductCreateButton from '../create/product-create.button';
 import ProductCreationContainer from '../create/product-creation.container';
 import { productSlice } from '../../../store/product/product.slice';
+import ProductFormComponent from '../form/product-form.component';
 
 type ProductListContainerProps = {};
 
@@ -30,7 +30,7 @@ const ProductListContainer = (props: ProductListContainerProps) => {
             {error && <h1>{error}</h1>}
             <ProductList products={products} />
             <ProductCreateButton onClick={handleClick} />
-            <ProductCreationContainer children={<div></div>} onClick={handleClick} />
+            <ProductCreationContainer children={<ProductFormComponent />} onClose={handleClick} />
         </div>
     );
 };

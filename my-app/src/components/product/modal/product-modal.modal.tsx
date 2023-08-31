@@ -26,7 +26,7 @@ const ModalHeader = styled.header`
 
 const ModalTitle = styled.h1`
     position: relative;
-    left: 15rem;
+    left: 12rem;
 `;
 
 const Modal = ({ children, title, onClick }: ModalProps) => {

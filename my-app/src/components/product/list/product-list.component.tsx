@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
-import { ProductModel } from '../../../models/product.model';
+import { IProduct } from '../../../models/product.model';
 import ProductCardComponent from '../card/product-card.component';
 import styled from 'styled-components';
 
-type ProductListProps = { products: ProductModel[] };
+type ProductListProps = { products: IProduct[] };
 
 export const ProductsList = styled.ul`
     list-style-type: none;
