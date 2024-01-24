@@ -30,7 +30,7 @@ const ProductListContainer = (props: ProductListContainerProps) => {
             {error && <h1>{error}</h1>}
             <ProductList products={products} />
             <ProductCreateButton onClick={handleClick} />
-            <ProductCreationContainer children={<ProductFormComponent />} onClose={handleClick} />
+            <ProductCreationContainer children={<ProductFormComponent/>} onClose={handleClick} />
         </div>
     );
 };

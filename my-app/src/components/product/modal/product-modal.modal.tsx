@@ -13,7 +13,7 @@ interface ModalProps {
 
 const ModalWrapper = styled.div`
     width: 40%;
-    height: 40vh;
+    height: 45vh;
     background-color: white;
     display: flex;
     flex-direction: column;

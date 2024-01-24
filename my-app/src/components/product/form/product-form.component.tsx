@@ -1,15 +1,9 @@
 import React, { memo } from 'react';
-import TextInput from '../../UI/input.text';
 import styled from 'styled-components';
-import ButtonComponent from '../../UI/button.submit';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { createProductApi } from '../../../services/product-api.service';
 import { useAppDispatch } from '../../../hooks/redux';
 import ButtonSubmit from '../../UI/button.submit';
-
-type ProductFormProps = {
-    onSubmit: React.FormEventHandler<HTMLButtonElement>;
-};
 
 const Form = styled.form`
     display: flex;
@@ -26,7 +20,7 @@ const Form = styled.form`
 const InputLabel = styled.label`
     display: inline-block;
     width: 20rem;
-    height: 100px;
+    height: 5rem;
 `;
 
 const TextInputStyle = styled.input`
@@ -45,7 +39,6 @@ function ProductForm() {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm<Inputs>();
 

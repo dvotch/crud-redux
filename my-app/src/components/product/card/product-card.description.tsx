@@ -12,6 +12,7 @@ const DescriptionText = styled.p`
     margin: 0;
     overflow-y: auto;
     height: 12rem;
+    color: yellow;
 `;
 
 const DescriptionButton = styled.button`
@@ -26,6 +27,7 @@ const ProductDescription = ({ text, maxLength = MAX_LENGTH }: ProductDescription
     const initialText = React.useMemo(() => {
         return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
     }, []);
+    
     const [showAllButtonStatus, setshowAllButtonStatus] = React.useState(false);
     const [visibleText, setVisibleText] = React.useState(initialText);
 
